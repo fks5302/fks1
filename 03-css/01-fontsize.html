@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font size : css</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nanum+Pen+Script&family=Wallpoet&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #000;
+            box-sizing: border-box;
+            font-family: 'Bubblegum Sans', cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>font size</h1>
+    
+    <h2>1. px단위(절대값)</h2>
+    <div class="size-1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error corrupti est expedita facere soluta, accusantium provident vero sequi saepe in aspernatur voluptates quod, ipsum aliquam nulla voluptas illum repudiandae maxime.
+    </div>
+
+    <style>
+        .size-1 {
+            /* font-size: 14px; */
+            /* line-height: 1.5; */
+        }
+    </style>
+
+    <hr>
+    <h2>2. em 단위(상대값)</h2>
+    <ul>
+        <li>안녕하세요. <strong>더조은입니다.</strong></li>
+        <li><strong>더조은 컴퓨터</strong>에서 공지합니다.</li>
+        <li><strong>웹디자인(퍼블리싱)</strong>오픈 합니다.</li>
+    </ul>
+
+    <style>
+        ul li:first-child {
+            font-size: 14px;
+        }
+
+        ul li:first-child strong {
+            font-size: 28px;
+        }
+
+        /*  기존폰트가 12px  */
+        ul li:nth-child(2) {
+            font-size: 1.333em;
+        }    /* 16px */
+
+        ul li:nth-child(2) strong { 
+            font-size: 2.667em;
+        }    /* 32px */
+
+        ul li:last-child { 
+            font-size: 1.500em;
+        }     /*  12px 기준으로 18px을 하면 1.500em이 나온다. */
+        /* 부모의 기준으로 자식 em */
+
+        ul li:last-child strong { 
+            font-size: 2.000em;
+        }      /*  12px 기준으로 24px을 하면 2.000em이 나온다. */
+
+        /* 마지막꺼를 글씨를 똑같이 만들고 싶다면 
+        ul li:last-child { font-size: 2em; }
+                rem 단위는 reset 기분 (부모 x)
+        ul li:last-child strong { font-size: 2rem;} 
+        이렇게 해주면 된다.
+        */
+    </style>
+    
+    <hr>
+    <h2>3. vw, vh 단위(뷰포트 기준)</h2>
+    <div class="size-3">가나다라마바사아자차</div>
+
+    <style>
+        .size-3 {
+            /* widows: 100vw; viewport width  */
+            height: 100vh; /* viewport height */
+            background-color: tomato;
+            font-size: 10vw;
+        }
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow : css</title>
+</head>
+<body>
+    <h1>overflow</h1>
+
+    <h2>1. overflow hidden</h2>
+
+    <div class="box1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus incidunt temporibus ratione provident dolor asperiores quibusdam itaque maiores reiciendis impedit! Deleniti similique perferendis dolores dolorum rerum quos nobis nesciunt quidem.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus incidunt temporibus ratione provident dolor asperiores quibusdam itaque maiores reiciendis impedit! Deleniti similique perferendis dolores dolorum rerum quos nobis nesciunt quidem.
+    </div>
+    
+    <style>
+        .box1 {
+            overflow: hidden;
+            height: 100px;
+            width: 300px;
+            background-color: violet;
+        }
+    </style>
+
+<h2>2. overflow scroll</h2>
+
+<div class="box2">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus incidunt temporibus ratione provident dolor asperiores quibusdam itaque maiores reiciendis impedit! Deleniti similique perferendis dolores dolorum rerum quos nobis nesciunt quidem.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus incidunt temporibus ratione provident dolor asperiores quibusdam itaque maiores reiciendis impedit! Deleniti similique perferendis dolores dolorum rerum quos nobis nesciunt quidem.
+</div>
+
+<style>
+    .box2 {
+        overflow-y: scroll;    /* overflow-y : auto로 써주면  */
+        height: 100px;
+        width: 300px;
+        background-color: violet;
+    }
+</style>
+
+
+
+</body>
+</html>

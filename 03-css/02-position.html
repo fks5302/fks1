@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position : css</title>
+</head>
+<body>
+    <h1>position</h1>
+
+    <br><br><br><br><br>
+    <div class="box5">sticky</div>
+
+
+    <div class="wrap">  <!-- 이건 할머니, 할아버지 -->
+        <div class="inner"> <!-- 이건 부모님 -->
+            <div class="box1">fixed</div>   <!-- 이건 자식 -->
+            <div class="box2">fixed center</div>
+            <div class="box3">absolute</div>
+            <div class="box4">absolute center</div>
+            <div class="box6"></div>
+        </div>
+    </div>
+    
+    <style>
+        .wrap {
+            position: relative;
+            height: 100vh;    /* vh = 내브라우저의 기준으로 꽉채우라는것 */
+            background: lightpink;
+        }
+
+        /* fixed gnb를 만들고 싶을때 */
+        .box1 {  
+            /* 맨위에 고정 하는 법 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;    /* 겹치는 부분이 있으면 이 부분을 뒤로 가게 하라는 뜻 그리고 단위도 적어주면 안된다. */
+            height: 50px;
+            background: rgba(60, 179, 114, 0.7);
+        }
+        /* position: fixed;
+            top: 0;
+            left: 0;
+            이건 위에 고정을 하는거   
+
+            position: fixed;
+            bottom: 0;
+            flex: 0;
+            이건 왼쪽 밑으로 고정
+        */
+
+        .box2 {
+            /* 스크롤 옆의 메뉴 버튼 만드는법  */
+            position: fixed;   /* fixed = 바디의 기준으로 배치가 된다. */
+            right: 0;
+            top: 50%;   /* 이건 가운데 정렬이 맞긴하지만 시작지점을 50%로 가져다줘 라는거다. 그래서 margin-top: -50px; 이걸 적어 주는 거다. */
+            z-index: 100;   /* 겹치는 부분이 있으면 이 부분을 뒤로 가게 하라는 뜻 */
+            width: 30px;
+            height: 100px;
+            margin-top: -50px;
+            writing-mode: vertical-lr;   /* 글씨를 세로로 정렬 하는 방법 */
+            background: #000;
+            color: #fff;
+        }
+
+        .box3 {
+            /* 아래 오른쪽에 고정 하는 법 */
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: red;
+            /* position: absolute; 이걸 적을때는 top, left를 무조건 같이 써줘야 한다.
+            top: 0;
+            left: 0;
+            이렇게 적으면 위에 오게 하는거다.
+            그런데
+            .wrap 의 박스에
+            position: relative;
+            이것도 같이 적어줘야 한다.
+            이게 없으면 맨위로 올라 가기 때문에 부모의 기준으로 가야 하므로 wrap에 값을 줘야 한다.
+            */
+        }
+
+        .box4{
+            /* 가운데 고정 하는 법 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            margin: -50px 0 0 -50px;
+            background: slateblue;
+        }
+
+        .box5 {
+            /* 스크롤을 내렸을경우 위에 고정 하는법 */
+            position: sticky;
+            top: 0;
+            left: 0;
+            height: 50px;
+            background: violet;
+        }
+        
+    </style>
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+</body>
+</html>
